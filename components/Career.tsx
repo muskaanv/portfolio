@@ -20,11 +20,7 @@ export default function Career() {
           {career.map((role) => {
             const open = openId === role.id;
             return (
-              <div
-                key={role.id}
-                onMouseEnter={() => setOpenId(role.id)}
-                onMouseLeave={() => setOpenId(lockedId ?? null)}
-              >
+              <div key={role.id}>
                 <button
                   onClick={() => {
                     if (lockedId === role.id) {
@@ -35,12 +31,12 @@ export default function Career() {
                       setOpenId(role.id);
                     }
                   }}
-                  className="flex w-full items-center gap-4 py-6 text-left"
+                  className="flex w-full flex-col gap-3 py-6 text-left sm:flex-row sm:items-center sm:gap-4"
                   aria-expanded={open}
                 >
-                  <span className="w-16 shrink-0 font-mono text-xs text-orange">{role.chapter}</span>
-                  <span className="w-40 shrink-0 text-xs text-muted">{role.period}</span>
-                  <span className="flex-1">
+                  <span className="w-full shrink-0 font-mono text-xs text-orange sm:w-16">{role.chapter}</span>
+                  <span className="w-full shrink-0 text-xs text-muted sm:w-40">{role.period}</span>
+                  <span className="min-w-0 flex-1">
                     <span className="font-display text-xl font-700 md:text-2xl">{role.title}</span>{" "}
                     <span className="text-muted">{role.org}</span>
                   </span>

@@ -11,10 +11,10 @@ export default function Contact() {
           {/* <span className="eyebrow !text-mutedlight">(Final page)</span> */}
         </div>
 
-        <h2 className="font-display text-5xl font-800 uppercase leading-[0.95] md:text-7xl">
+        <h2 className="font-display text-4xl font-800 uppercase leading-[0.95] sm:text-5xl md:text-7xl">
           Let&apos;s build
         </h2>
-        <p className="font-accent text-4xl italic text-orange md:text-6xl">together.</p>
+        <p className="font-accent text-3xl italic text-orange sm:text-4xl md:text-6xl">together.</p>
 
         <div className="mt-10 grid gap-10 md:grid-cols-[1fr_1fr]">
           <div>

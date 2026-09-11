@@ -74,12 +74,12 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-10 divide-y divide-line dark:divide-linedark">
+            <div className="mt-10 space-y-2">
               {about.principles.map((p, i) => (
-                <div key={i} className="grid grid-cols-[2rem_1fr] gap-4 py-4 md:grid-cols-[2rem_220px_1fr]">
-                  <span className="text-orange">0{i + 1}</span>
-                  <span className="font-medium">{p.title}</span>
-                  <span className="text-sm text-muted">{p.body}</span>
+                <div key={i} className="grid gap-2 border-t border-line py-6 dark:border-linedark md:grid-cols-[2.5rem_minmax(0,240px)_1fr] md:gap-4">
+                  <span className="font-mono text-sm text-orange md:text-base">0{i + 1}</span>
+                  <h3 className="font-display text-3xl font-700 leading-[0.95] md:text-4xl">{p.title}</h3>
+                  <p className="text-base leading-relaxed text-muted md:pt-1">{p.body}</p>
                 </div>
               ))}
             </div>

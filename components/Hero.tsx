@@ -79,14 +79,14 @@ function TypedHeadline() {
 
   return (
     <>
-      <div className="relative inline-block">
-        <span className="invisible block">{hero.headline}</span>
-        <span className="absolute left-0 top-0 block">{typedHeadline}</span>
+      <div className="relative inline-block max-w-full">
+        <span className="invisible block whitespace-pre-wrap">{hero.headline}</span>
+        <span className="absolute inset-0 block whitespace-pre-wrap">{typedHeadline}</span>
       </div>
 
-      <div className="relative block mt-2 md:mt-4">
-        <span className="invisible block font-accent not-italic font-semibold text-[5.5vw] md:text-[2.2rem]">{hero.accent}</span>
-        <span className="absolute left-0 top-0 block font-accent not-italic font-semibold text-orange text-[5.5vw] md:text-[2.2rem]">{typedAccent}</span>
+      <div className="relative mt-2 block max-w-full md:mt-4">
+        <span className="invisible block whitespace-pre-wrap font-accent text-[5.5vw] font-semibold not-italic md:text-[2.2rem]">{hero.accent}</span>
+        <span className="absolute inset-0 block whitespace-pre-wrap font-accent text-[5.5vw] font-semibold not-italic text-orange md:text-[2.2rem]">{typedAccent}</span>
       </div>
     </>
   );
@@ -95,7 +95,7 @@ function TypedHeadline() {
 export default function Hero() {
   return (
     <section id="top" className="section-wrap pb-28 pt-14 md:pt-20">
-      <div className="mb-10 flex items-center justify-between text-xs text-muted">
+      <div className="mb-10 flex flex-col gap-3 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
         <span className="eyebrow">{hero.eyebrow}</span>
         <span className="rounded-full border border-line px-3 py-1 dark:border-linedark availability-blink font-bold">
           {(hero as any).availability}
@@ -123,13 +123,13 @@ export default function Hero() {
         `}</style>
       </div>
 
-      <h1 className="font-display text-[7.5vw] font-800 uppercase leading-[0.92] tracking-tight md:text-[3.6rem]">
+      <h1 className="font-display text-[13vw] font-800 uppercase leading-[0.9] tracking-tight sm:text-[8vw] md:text-[3.6rem]">
         <TypedHeadline />
       </h1>
 
-      <div className="mt-10 grid gap-8 md:grid-cols-[2fr_1fr] md:items-end">
-        <p className="max-w-xl text-base text-muted md:text-lg mb-8 md:mb-12">{hero.sub}</p>
-        <div className="text-sm text-muted md:text-right mb-8 md:mb-12">
+      <div className="mt-10 grid gap-6 md:grid-cols-[2fr_1fr] md:items-end">
+        <p className="mb-8 max-w-xl text-base text-muted md:mb-12 md:text-lg">{hero.sub}</p>
+        <div className="mb-8 text-sm text-muted md:mb-12 md:text-right">
           <p>{profile.role}</p>
           <p>{profile.location}</p>
         </div>
